@@ -11,43 +11,43 @@ export default function HarmonHillsBooking() {
       {
         name: "Bunkhouse 1 (A-frame: Keaton's Cabin)",
         description:
-          "A cozy A-frame cabin near the bathhouse and trails to Hollerwood. Sleeps 6, includes kitchenette and lofted sleeping areas.",
+          "A cozy A-frame cabin near the bathhouse and trails to Hollerwood. Sleeps 6, includes kitchenette and lofted sleeping area.",
       },
       {
         name: "Bunkhouse 2 (A-frame: Kaelee's Cabin)",
-        description: "Rustic A-frame bunkhouse with great views and easy trail access. Sleeps 4.",
+        description: "Identical cozy A-frame bunkhouse near bathouse and trails to Hollerwood. Sleeps 6, includes kitchenette and lofted sleeping area.",
       },
       {
         name: "Bunkhouse 3 (Cassie's Cabin)",
-        description: "Comfortable cabin with modern amenities and nearby fire ring. Sleeps 4.",
+        description: "Comfortable 1-room cabin directly next to bathhouse. Sleeps 6.",
       },
       {
         name: "Bunkhouse 4 (Andrew's Cabin)",
-        description: "Spacious bunkhouse with private porch and access to nearby trails. Sleeps 6.",
+        description: "Comfortable 1-room cabin themed after an old western with private porch and access to nearby trails. Sleeps 6.",
       },
       {
         name: "Bunkhouse 5 (Mackenzie's Cabin)",
-        description: "Bright, charming cabin nestled in a quiet corner. Ideal for small families. Sleeps 4.",
+        description: "Charming cabin nestled in a quiet corner. Ideal for small families. Sleeps 6.",
       },
     ],
     rv: [
       {
         name: "RV Site A",
-        description: "Spacious pull-through site with full hookups and picnic table.",
+        description: "Spacious pull-through RV site with full hookups, picnic table, and fire pit.",
       },
       {
         name: "RV Site B",
-        description: "Shaded RV site near bathhouse. Electric and water hookups included.",
+        description: "Spacious pull-through RV site with full hookups, picnic table, and fire pit.",
       },
     ],
     tent: [
       {
         name: "Tent Site 1",
-        description: "Primitive site under the trees. Fire ring and nearby water access.",
+        description: "Primitive site under the trees. Picnic area and fire pit and nearby access to bathouse.",
       },
       {
         name: "Tent Site 2",
-        description: "Tent site with gazebo and picnic area. Close to trail entrance.",
+        description: "Primitive site close to trail entrance. Picnic area and fire pit and nearby access to bathouse",
       },
     ],
   };
