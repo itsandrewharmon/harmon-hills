@@ -1,4 +1,3 @@
-
 import React from "react";
 import { useState } from "react";
 
@@ -10,13 +9,25 @@ export default function HarmonHillsBooking() {
   const accommodations = {
     bunkhouse: [
       {
-        name: "Bunkhouse 1 – A-Frame Cabin",
+        name: "Bunkhouse 1 (A-frame: Keaton's Cabin)",
         description:
           "A cozy A-frame cabin near the bathhouse and trails to Hollerwood. Sleeps 6, includes kitchenette and lofted sleeping areas.",
       },
       {
-        name: "Bunkhouse 2",
-        description: "Rustic bunkhouse with great views and easy trail access. Sleeps 4.",
+        name: "Bunkhouse 2 (A-frame: Kaelee's Cabin)",
+        description: "Rustic A-frame bunkhouse with great views and easy trail access. Sleeps 4.",
+      },
+      {
+        name: "Bunkhouse 3 (Cassie's Cabin)",
+        description: "Comfortable cabin with modern amenities and nearby fire ring. Sleeps 4.",
+      },
+      {
+        name: "Bunkhouse 4 (Andrew's Cabin)",
+        description: "Spacious bunkhouse with private porch and access to nearby trails. Sleeps 6.",
+      },
+      {
+        name: "Bunkhouse 5 (Mackenzie's Cabin)",
+        description: "Bright, charming cabin nestled in a quiet corner. Ideal for small families. Sleeps 4.",
       },
     ],
     rv: [
