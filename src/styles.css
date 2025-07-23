@@ -1,21 +1,24 @@
+/* Base */
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: url('https://images.unsplash.com/photo-1518837695005-2083093ee35b') no-repeat center center fixed;
+  background: url('https://images.unsplash.com/photo-1508780709619-79562169bc64') no-repeat center center fixed;
   background-size: cover;
   margin: 0;
   padding: 0;
-  color: #2f2f2f;
+  color: #2e2e2e;
 }
 
+/* Container */
 .container {
   background-color: rgba(255, 255, 255, 0.95);
   max-width: 960px;
   margin: 2rem auto;
   padding: 2rem;
   border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
 }
 
+/* Titles */
 .title {
   font-size: 2.8rem;
   text-align: center;
@@ -26,11 +29,12 @@ body {
 
 .subtitle {
   text-align: center;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: #5a4434;
   margin-bottom: 2rem;
 }
 
+/* Nav Bar */
 .nav-bar {
   display: flex;
   gap: 1rem;
@@ -42,7 +46,7 @@ body {
 .nav-bar button,
 .dropbtn {
   background-color: #6b4e2e;
-  color: #fff;
+  color: white;
   border: none;
   padding: 0.6rem 1.2rem;
   font-size: 1rem;
@@ -57,6 +61,7 @@ body {
   background-color: #543e25;
 }
 
+/* Dropdown */
 .dropdown {
   position: relative;
   display: inline-block;
@@ -71,6 +76,7 @@ body {
   border: 1px solid #d4c1a5;
   border-radius: 4px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  margin-top: 4px;
 }
 
 .dropdown-content a {
@@ -89,14 +95,47 @@ body {
   display: block;
 }
 
+/* Waiver Section */
+.waiver-section {
+  text-align: center;
+  padding: 2rem;
+  background-color: #fefaf5;
+  border-radius: 12px;
+  margin-top: 2rem;
+  border: 1px solid #e4d8c4;
+}
+
+.waiver-section h2 {
+  font-size: 1.6rem;
+  color: #4e3b2c;
+  margin-bottom: 0.5rem;
+}
+
+.waiver-button {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  background-color: #8b4d16;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.waiver-button:hover {
+  background-color: #6e3e10;
+}
+
+/* Booking Cards */
 .card-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
+  margin-top: 2rem;
 }
 
 .card {
-  background-color: #fefaf5;
+  background-color: #fdfaf5;
   border: 2px solid #ccb89e;
   padding: 1rem;
   border-radius: 8px;
@@ -111,9 +150,10 @@ body {
 
 .card.selected {
   border-color: #785438;
-  background-color: #fdf4e7;
+  background-color: #f5ede2;
 }
 
+/* Booking Form */
 .booking-form {
   text-align: center;
   margin-top: 3rem;
@@ -140,24 +180,4 @@ body {
 
 .booking-form button:hover {
   background-color: #365b2d;
-}
-
-.waiver-section {
-  text-align: center;
-  margin-top: 2rem;
-}
-
-.waiver-button {
-  margin-top: 1rem;
-  padding: 0.6rem 1.2rem;
-  font-size: 1rem;
-  background-color: #8b4d16;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-.waiver-button:hover {
-  background-color: #6e3e10;
 }
