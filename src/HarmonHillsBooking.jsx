@@ -4,7 +4,7 @@ import './styles.css';
 
 export default function HarmonHillsBooking() {
   const [selectedDate, setSelectedDate] = useState("");
-  const [selectedType, setSelectedType] = useState(null);
+  const [selectedType, setSelectedType] = useState("bunkhouse");
   const [selectedOption, setSelectedOption] = useState("");
 
   const accommodations = {
@@ -59,68 +59,45 @@ export default function HarmonHillsBooking() {
 
   return (
     <div className="container">
-      <nav className="nav-bar">
-        <button onClick={() => {
-          setSelectedType(null);
-          setSelectedOption("");
-          setSelectedDate("");
-        }}>Home</button>
-
-        <div className="dropdown">
-          <button className="dropbtn">Reservations</button>
-          <div className="dropdown-content">
-            <a href="#" onClick={() => setSelectedType("bunkhouse")}>Bunkhouses</a>
-            <a href="#" onClick={() => setSelectedType("rv")}>RV Sites</a>
-            <a href="#" onClick={() => setSelectedType("tent")}>Tent Sites</a>
-          </div>
-        </div>
-      </nav>
-
       <h1 className="title">Harmon Hills Adventures & Campgrounds</h1>
-      <p className="subtitle">Your adventure starts here! Reserve your stay with us!</p>
+      <p className="subtitle">
+        Reserve your spot now! Choose from bunkhouses, RV sites, or tent sites.
+      </p>
 
-      {!selectedType && (
-        <div className="waiver-section">
-          <h2>Harmon Hills Waiver</h2>
-          <p>All persons who enter Harmon Hills property must complete a waiver.</p>
-          <a href="https://app.waiverelectronic.com/render/templateByRefId/Harmon_Hills_Waiver" target="_blank" rel="noopener noreferrer">
-            <button className="waiver-button">Waiver</button>
-          </a>
-        </div>
-      )}
+      <div className="button-group">
+        <button onClick={() => setSelectedType("bunkhouse")}>Bunkhouses</button>
+        <button onClick={() => setSelectedType("rv")}>RV Sites</button>
+        <button onClick={() => setSelectedType("tent")}>Tent Sites</button>
+      </div>
 
-      {selectedType && (
-        <>
-          <div className="card-grid">
-            {accommodations[selectedType].map((option, index) => (
-              <div
-                key={index}
-                className={`card ${selectedOption === option.name ? "selected" : ""}`}
-                onClick={() => setSelectedOption(option.name)}
-              >
-                <h2>{option.name}</h2>
-                <p>{option.description}</p>
-              </div>
-            ))}
+      <div className="card-grid">
+        {accommodations[selectedType].map((option, index) => (
+          <div
+            key={index}
+            className={`card ${selectedOption === option.name ? "selected" : ""}`}
+            onClick={() => setSelectedOption(option.name)}
+          >
+            <h2>{option.name}</h2>
+            <p>{option.description}</p>
           </div>
+        ))}
+      </div>
 
-          <div className="booking-form">
-            <h3>Select a Date</h3>
-            <input
-              type="date"
-              value={selectedDate}
-              onChange={(e) => setSelectedDate(e.target.value)}
-            />
-            <br />
-            <button
-              onClick={handleBooking}
-              disabled={!selectedOption || !selectedDate}
-            >
-              Confirm Reservation
-            </button>
-          </div>
-        </>
-      )}
+      <div className="booking-form">
+        <h3>Select a Date</h3>
+        <input
+          type="date"
+          value={selectedDate}
+          onChange={(e) => setSelectedDate(e.target.value)}
+        />
+        <br />
+        <button
+          onClick={handleBooking}
+          disabled={!selectedOption || !selectedDate}
+        >
+          Confirm Reservation
+        </button>
+      </div>
     </div>
   );
 }
