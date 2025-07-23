@@ -1,31 +1,50 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 
+import keaton1 from '../assets/images/keatoncabininside.jpg';
+import keaton2 from '../assets/images/keatoncabininside2.jpg';
+import keaton3 from '../assets/images/keatoncabinoutside.jpg';
+
+import kaelee1 from '../assets/images/Kaeleecabininside.jpg';
+import kaelee2 from '../assets/images/kaeleecabininside2.jpg';
+import kaelee3 from '../assets/images/Kaeleecabinoutside.jpg';
+
+import cassie1 from '../assets/images/cassiecabininside.jpg';
+import cassie2 from '../assets/images/cassiecabininside1.jpg';
+import cassie3 from '../assets/images/cassiecabininside3.jpg';
+import cassie4 from '../assets/images/Cassiecabinoutside.jpg';
+
+import andrew1 from '../assets/images/andrewcabininside.jpg';
+import andrew2 from '../assets/images/andrewcabininside2.jpg';
+import andrew3 from '../assets/images/andrewcabininside3.jpg';
+import andrew4 from '../assets/images/andrewcabininside4.jpg';
+import andrew5 from '../assets/images/andrewcabinoutside.jpg';
+
 const bunkhouses = {
   1: {
     name: "Bunkhouse 1 (A-frame: Keaton's Cabin)",
     description: "A cozy A-frame cabin near the bathhouse and trails to Hollerwood. Sleeps 6, includes kitchenette and lofted sleeping area.",
-    images: ["keatoncabininside.jpg", "keatoncabininside2.jpg", "keatoncabinoutside.jpg"]
+    images: [keaton1, keaton2, keaton3]
   },
   2: {
     name: "Bunkhouse 2 (A-frame: Kaelee's Cabin)",
     description: "Identical cozy A-frame bunkhouse near bathhouse and trails to Hollerwood. Sleeps 6, includes kitchenette and lofted sleeping area.",
-    images: ["Kaeleecabininside.jpg", "kaeleecabininside2.jpg", "Kaeleecabinoutside.jpg"]
+    images: [kaelee1, kaelee2, kaelee3]
   },
   3: {
     name: "Bunkhouse 3 (Cassie's Cabin)",
     description: "Comfortable 1-room cabin directly next to bathhouse. Sleeps 6.",
-    images: ["cassiecabininside.jpg", "cassiecabininside1.jpg", "cassiecabininside3.jpg", "Cassiecabinoutside.jpg"]
+    images: [cassie1, cassie2, cassie3, cassie4]
   },
   4: {
     name: "Bunkhouse 4 (Andrew's Cabin)",
     description: "Comfortable 1-room cabin themed after an old western with private porch and access to nearby trails. Sleeps 6.",
-    images: ["andrewcabininside.jpg", "andrewcabininside2.jpg", "andrewcabininside3.jpg", "andrewcabininside4.jpg", "andrewcabinoutside.jpg"]
+    images: [andrew1, andrew2, andrew3, andrew4, andrew5]
   },
   5: {
     name: "Bunkhouse 5 (Mackenzie's Cabin)",
     description: "Charming cabin nestled in a quiet corner. Ideal for small families. Sleeps 6.",
-    images: []
+    images: [] // Add images when available
   }
 };
 
@@ -45,8 +64,8 @@ export default function BunkhouseDetail() {
         {bunkhouse.images.map((img, index) => (
           <img
             key={index}
-            src={require(`../../assets/images/${img}`)}
-            alt={bunkhouse.name}
+            src={img}
+            alt={`${bunkhouse.name} ${index + 1}`}
             style={{ maxWidth: "100%", marginBottom: "1rem", borderRadius: "8px" }}
           />
         ))}
