@@ -77,9 +77,17 @@ export default function HarmonHillsBooking() {
       </nav>
 
       <h1 className="title">Harmon Hills Adventures & Campgrounds</h1>
-      <p className="subtitle">
-        Reserve your spot now! Choose from bunkhouses, RV sites, or tent sites.
-      </p>
+      <p className="subtitle">Your adventure starts here! Reserve your stay with us!</p>
+
+      {!selectedType && (
+        <div className="waiver-section">
+          <h2>Harmon Hills Waiver</h2>
+          <p>All persons who enter Harmon Hills property must complete a waiver.</p>
+          <a href="https://app.waiverelectronic.com/render/templateByRefId/Harmon_Hills_Waiver" target="_blank" rel="noopener noreferrer">
+            <button className="waiver-button">Waiver</button>
+          </a>
+        </div>
+      )}
 
       {selectedType && (
         <>

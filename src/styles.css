@@ -153,3 +153,22 @@ body {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
+.waiver-section {
+  text-align: center;
+  margin: 2rem auto;
+}
+
+.waiver-button {
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.waiver-button:hover {
+  background-color: #e65c00;
+}
