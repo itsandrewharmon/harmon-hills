@@ -198,3 +198,35 @@ body {
 .booking-form button:hover {
   background-color: #365b2d;
 }
+
+/* Additional Header and Nav styles for detailed bunkhouse pages */
+header {
+    background-color: #2e3d29;
+    color: white;
+    padding: 1em;
+    text-align: center;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+nav ul li {
+    display: inline-block;
+    position: relative;
+}
+nav ul li a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+}
+nav ul li ul.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #3f4e39;
+}
+nav ul li:hover ul.dropdown {
+    display: block;
+}
+nav ul li ul.dropdown li {
+    display: block;
+}
