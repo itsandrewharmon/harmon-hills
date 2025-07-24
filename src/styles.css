@@ -1,51 +1,38 @@
-
 body {
-    font-family: 'Segoe UI', sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #2e2e2e;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fdfcf8;
+  color: #2e2e2e;
 }
-header {
-    background-color: #3a2e2e;
-    color: white;
-    padding: 1rem;
-    text-align: center;
+.container {
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 2rem;
 }
-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    background-color: #6b4e2e;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #4a3728;
+  padding: 1rem;
 }
-nav ul li {
-    position: relative;
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 1rem;
 }
-nav ul li a {
-    color: white;
-    padding: 1rem;
-    display: block;
-    text-decoration: none;
+.title {
+  font-size: 2rem;
+  text-align: center;
+  margin: 1rem 0;
 }
-nav ul li ul.dropdown {
-    display: none;
-    position: absolute;
-    background-color: #543e25;
-    min-width: 160px;
+.card {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 1rem;
+  margin-bottom: 1rem;
 }
-nav ul li:hover ul.dropdown {
-    display: block;
-}
-.waiver-section {
-    margin: 2rem auto;
-    text-align: center;
-}
-.waiver-button {
-    padding: 0.6rem 1.2rem;
-    font-size: 1rem;
-    background-color: #8b4d16;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
+img {
+  max-width: 100%;
+  border-radius: 8px;
 }
