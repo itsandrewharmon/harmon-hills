@@ -1,48 +1,69 @@
-.home-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2rem;
+/* Global Styles */
+body {
+  font-family: 'Georgia', serif;
+  background-color: #f4f1ec;
+  color: #2e2e2e;
+  margin: 0;
+  padding: 0;
 }
 
-.header {
+/* Container Layout */
+.container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Header and Titles */
+.title, .main-title {
+  font-size: 2.6rem;
+  color: #2e4f2e;
+  margin-bottom: 0.5rem;
   text-align: center;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #4e3b2c;
   margin-bottom: 2rem;
 }
 
-.main-title {
-  font-size: 2.8rem;
-  color: #3e2c23;
-  font-family: 'Georgia', serif;
-  margin-bottom: 0.5rem;
-}
-
+/* Navigation Bar */
 .nav-bar {
   display: flex;
-  gap: 1rem;
   justify-content: center;
-  margin-top: 1rem;
+  align-items: center;
+  background-color: #2e4f2e;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  gap: 1rem;
 }
 
 .nav-link,
 .dropbtn {
-  background-color: #6b4e2e;
+  background-color: #3a693a;
   color: white;
-  border: none;
   padding: 0.6rem 1.2rem;
-  font-size: 1rem;
+  border: none;
   border-radius: 6px;
   cursor: pointer;
   font-weight: bold;
   text-transform: uppercase;
   text-decoration: none;
+  font-size: 0.95rem;
 }
 
 .nav-link:hover,
 .dropbtn:hover {
-  background-color: #543e25;
+  background-color: #264d26;
 }
 
+/* Dropdown Menu */
 .dropdown {
   position: relative;
 }
@@ -53,50 +74,120 @@
   top: 110%;
   left: 0;
   background-color: #fff8f0;
-  border: 1px solid #e4d8c4;
+  border: 1px solid #ddd0ba;
   border-radius: 6px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
   z-index: 100;
-  min-width: 180px;
+  min-width: 200px;
 }
 
 .dropdown-content a {
   display: block;
   padding: 0.75rem 1rem;
-  color: #3e2c23;
+  color: #2e2e2e;
   text-decoration: none;
   font-weight: 500;
 }
 
 .dropdown-content a:hover {
-  background-color: #f5e8d4;
+  background-color: #f0e6d8;
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
+/* Waiver Section */
 .waiver-section {
-  background-color: #fefaf5;
+  background-color: #edf4ec;
   padding: 2rem;
-  border-radius: 12px;
-  border: 1px solid #e4d8c4;
+  border-radius: 10px;
+  border: 1px solid #c6d4c4;
   text-align: center;
   margin-top: 2rem;
-  max-width: 600px;
 }
 
 .waiver-button {
   margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #3e723e;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.waiver-button:hover {
+  background-color: #295229;
+}
+
+/* Card Grid for Images */
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+/* Booking Form */
+.booking-form {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.booking-form input[type='date'] {
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.booking-form button {
+  margin-top: 1rem;
   padding: 0.6rem 1.5rem;
   font-size: 1rem;
-  background-color: #8b4d16;
+  background-color: #2e4f2e;
   color: white;
   border: none;
   border-radius: 6px;
   cursor: pointer;
 }
 
-.waiver-button:hover {
-  background-color: #6e3e10;
+.booking-form button:hover {
+  background-color: #1c381c;
+}
+
+/* Image Slider */
+.image-slider {
+  position: relative;
+  max-width: 600px;
+  margin: auto;
+}
+
+.image-slider img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.slider-controls {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.slider-button {
+  background-color: #3a693a;
+  color: white;
+  border: none;
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.slider-button:hover {
+  background-color: #264d26;
 }
