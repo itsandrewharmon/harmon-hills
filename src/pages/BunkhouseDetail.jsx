@@ -21,30 +21,30 @@ import andrew4 from '../images/andrewcabininside4.jpg';
 import andrew5 from '../images/andrewcabinoutside.jpg';
 
 const bunkhouses = {
-  "1": {
+  1: {
     name: "Bunkhouse 1 (A-frame: Keaton's Cabin)",
     description: "A cozy A-frame cabin near the bathhouse and trails to Hollerwood. Sleeps 6, includes kitchenette and lofted sleeping area.",
     images: [keaton1, keaton2, keaton3]
   },
-  "2": {
+  2: {
     name: "Bunkhouse 2 (A-frame: Kaelee's Cabin)",
     description: "Identical cozy A-frame bunkhouse near bathhouse and trails to Hollerwood. Sleeps 6, includes kitchenette and lofted sleeping area.",
     images: [kaelee1, kaelee2, kaelee3]
   },
-  "3": {
+  3: {
     name: "Bunkhouse 3 (Cassie's Cabin)",
     description: "Comfortable 1-room cabin directly next to bathhouse. Sleeps 6.",
     images: [cassie1, cassie2, cassie3, cassie4]
   },
-  "4": {
+  4: {
     name: "Bunkhouse 4 (Andrew's Cabin)",
     description: "Comfortable 1-room cabin themed after an old western with private porch and access to nearby trails. Sleeps 6.",
     images: [andrew1, andrew2, andrew3, andrew4, andrew5]
   },
-  "5": {
+  5: {
     name: "Bunkhouse 5 (Mackenzie's Cabin)",
     description: "Charming cabin nestled in a quiet corner. Ideal for small families. Sleeps 6.",
-    images: []
+    images: [] // Add images when available
   }
 };
 
@@ -52,37 +52,26 @@ export default function BunkhouseDetail() {
   const { id } = useParams();
   const bunkhouse = bunkhouses[id];
 
-  if (!bunkhouse) {
-    return (
-      <div className="container">
-        <h2>Bunkhouse Not Found</h2>
-        <p>The bunkhouse you're looking for does not exist.</p>
-      </div>
-    );
-  }
+  if (!bunkhouse) return <div className="container"><h2>Bunkhouse not found</h2></div>;
 
   return (
     <div className="container">
       <h1 className="title">{bunkhouse.name}</h1>
       <p className="subtitle">{bunkhouse.description}</p>
       <div className="card-grid">
-        {bunkhouse.images.length > 0 ? (
-          bunkhouse.images.map((img, i) => (
-            <img
-              key={i}
-              src={img}
-              alt={`${bunkhouse.name} ${i + 1}`}
-              style={{
-                maxWidth: '100%',
-                marginBottom: '1rem',
-                borderRadius: '8px',
-                boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
-              }}
-            />
-          ))
-        ) : (
-          <p>No images available yet for this cabin.</p>
-        )}
+        {bunkhouse.images.map((img, i) => (
+          <img
+            key={i}
+            src={img}
+            alt={`${bunkhouse.name} ${i + 1}`}
+            style={{
+              maxWidth: '100%',
+              marginBottom: '1rem',
+              borderRadius: '8px',
+              boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
+            }}
+          />
+        ))}
       </div>
       <div className="booking-form">
         <h3>Select a Date</h3>
