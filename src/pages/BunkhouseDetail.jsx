@@ -44,13 +44,13 @@ const bunkhouses = {
   5: {
     name: "Bunkhouse 5 (Mackenzie's Cabin)",
     description: "Charming cabin nestled in a quiet corner. Ideal for small families. Sleeps 6.",
-    images: [] // Add images when available
+    images: []
   }
 };
 
 export default function BunkhouseDetail() {
   const { id } = useParams();
-  const bunkhouse = bunkhouses[id];
+  const bunkhouse = bunkhouses[parseInt(id)];
 
   if (!bunkhouse) return <div className="container"><h2>Bunkhouse not found</h2></div>;
 
