@@ -1,24 +1,24 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 
-import keaton1 from '../assets/images/keatoncabininside.jpg';
-import keaton2 from '../assets/images/keatoncabininside2.jpg';
-import keaton3 from '../assets/images/keatoncabinoutside.jpg';
+import keaton1 from '../images/keatoncabininside.jpg';
+import keaton2 from '../images/keatoncabininside2.jpg';
+import keaton3 from '../images/keatoncabinoutside.jpg';
 
-import kaelee1 from '../assets/images/Kaeleecabininside.jpg';
-import kaelee2 from '../assets/images/kaeleecabininside2.jpg';
+import kaelee1 from '../images/Kaeleecabininside.jpg';
+import kaelee2 from '../images/kaeleecabininside2.jpg';
 import kaelee3 from '../assets/images/Kaeleecabinoutside.jpg';
 
-import cassie1 from '../assets/images/cassiecabininside.jpg';
-import cassie2 from '../assets/images/cassiecabininside1.jpg';
-import cassie3 from '../assets/images/cassiecabininside3.jpg';
-import cassie4 from '../assets/images/Cassiecabinoutside.jpg';
+import cassie1 from '../images/cassiecabininside.jpg';
+import cassie2 from '../images/cassiecabininside1.jpg';
+import cassie3 from '../images/cassiecabininside3.jpg';
+import cassie4 from '../images/Cassiecabinoutside.jpg';
 
-import andrew1 from '../assets/images/andrewcabininside.jpg';
-import andrew2 from '../assets/images/andrewcabininside2.jpg';
-import andrew3 from '../assets/images/andrewcabininside3.jpg';
-import andrew4 from '../assets/images/andrewcabininside4.jpg';
-import andrew5 from '../assets/images/andrewcabinoutside.jpg';
+import andrew1 from '../images/andrewcabininside.jpg';
+import andrew2 from '../images/andrewcabininside2.jpg';
+import andrew3 from '../images/andrewcabininside3.jpg';
+import andrew4 from '../images/andrewcabininside4.jpg';
+import andrew5 from '../images/andrewcabinoutside.jpg';
 
 const bunkhouses = {
   1: {
