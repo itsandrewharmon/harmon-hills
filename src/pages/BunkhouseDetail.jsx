@@ -1,5 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useParams, Link } from 'react-router-dom';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import { Navigation } from 'swiper/modules';
 
 import keaton1 from '../images/keatoncabininside.jpg';
 import keaton2 from '../images/keatoncabininside2.jpg';
@@ -51,17 +55,8 @@ const bunkhouses = {
 export default function BunkhouseDetail() {
   const { id } = useParams();
   const bunkhouse = bunkhouses[id];
-  const [currentImg, setCurrentImg] = useState(0);
 
   if (!bunkhouse) return <div className="container"><h2>Bunkhouse not found</h2></div>;
-
-  const prevImage = () => {
-    setCurrentImg((prev) => (prev - 1 + bunkhouse.images.length) % bunkhouse.images.length);
-  };
-
-  const nextImage = () => {
-    setCurrentImg((prev) => (prev + 1) % bunkhouse.images.length);
-  };
 
   return (
     <div className="container">
@@ -73,21 +68,24 @@ export default function BunkhouseDetail() {
       <p className="subtitle">{bunkhouse.description}</p>
 
       {bunkhouse.images.length > 0 && (
-        <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-          <img
-            src={bunkhouse.images[currentImg]}
-            alt={`Slide ${currentImg + 1}`}
-            style={{
-              width: '100%',
-              maxWidth: '500px',
-              borderRadius: '8px',
-              boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
-            }}
-          />
-          <div style={{ marginTop: '1rem' }}>
-            <button onClick={prevImage} style={{ marginRight: '1rem' }}>← Prev</button>
-            <button onClick={nextImage}>Next →</button>
-          </div>
+        <div style={{ marginBottom: '2rem' }}>
+          <Swiper
+            navigation={true}
+            modules={[Navigation]}
+            spaceBetween={20}
+            slidesPerView={1}
+            style={{ maxWidth: '600px', margin: 'auto', borderRadius: '8px', overflow: 'hidden' }}
+          >
+            {bunkhouse.images.map((img, i) => (
+              <SwiperSlide key={i}>
+                <img
+                  src={img}
+                  alt={`${bunkhouse.name} ${i + 1}`}
+                  style={{ width: '100%', height: 'auto' }}
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
       )}
 
