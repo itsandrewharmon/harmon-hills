@@ -1,5 +1,5 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useState } from 'react';
+import { useParams, Link } from 'react-router-dom';
 
 import keaton1 from '../images/keatoncabininside.jpg';
 import keaton2 from '../images/keatoncabininside2.jpg';
@@ -50,29 +50,47 @@ const bunkhouses = {
 
 export default function BunkhouseDetail() {
   const { id } = useParams();
-  const bunkhouse = bunkhouses[parseInt(id)];
+  const bunkhouse = bunkhouses[id];
+  const [currentImg, setCurrentImg] = useState(0);
 
   if (!bunkhouse) return <div className="container"><h2>Bunkhouse not found</h2></div>;
 
+  const prevImage = () => {
+    setCurrentImg((prev) => (prev - 1 + bunkhouse.images.length) % bunkhouse.images.length);
+  };
+
+  const nextImage = () => {
+    setCurrentImg((prev) => (prev + 1) % bunkhouse.images.length);
+  };
+
   return (
     <div className="container">
+      <Link to="/" style={{ textDecoration: 'none' }}>
+        <button className="waiver-button" style={{ marginBottom: '1rem' }}>← Back to Home</button>
+      </Link>
+
       <h1 className="title">{bunkhouse.name}</h1>
       <p className="subtitle">{bunkhouse.description}</p>
-      <div className="card-grid">
-        {bunkhouse.images.map((img, i) => (
+
+      {bunkhouse.images.length > 0 && (
+        <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
           <img
-            key={i}
-            src={img}
-            alt={`${bunkhouse.name} ${i + 1}`}
+            src={bunkhouse.images[currentImg]}
+            alt={`Slide ${currentImg + 1}`}
             style={{
-              maxWidth: '100%',
-              marginBottom: '1rem',
+              width: '100%',
+              maxWidth: '500px',
               borderRadius: '8px',
               boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
             }}
           />
-        ))}
-      </div>
+          <div style={{ marginTop: '1rem' }}>
+            <button onClick={prevImage} style={{ marginRight: '1rem' }}>← Prev</button>
+            <button onClick={nextImage}>Next →</button>
+          </div>
+        </div>
+      )}
+
       <div className="booking-form">
         <h3>Select a Date</h3>
         <input type="date" />
