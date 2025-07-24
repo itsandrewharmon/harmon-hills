@@ -10,7 +10,7 @@ root.render(
   <Router>
     <Routes>
       <Route path="/" element={<HomePage />} />
-      <Route path="/bunkhouse/:id" element={<BunkhouseDetail />} />
+      <Route path="/bunkhouses/:id" element={<BunkhouseDetail />} />
     </Routes>
   </Router>
 );
