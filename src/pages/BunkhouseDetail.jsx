@@ -7,7 +7,7 @@ import keaton3 from '../images/keatoncabinoutside.jpg';
 
 import kaelee1 from '../images/Kaeleecabininside.jpg';
 import kaelee2 from '../images/kaeleecabininside2.jpg';
-import kaelee3 from '../assets/images/Kaeleecabinoutside.jpg';
+import kaelee3 from '..images/Kaeleecabinoutside.jpg';
 
 import cassie1 from '../images/cassiecabininside.jpg';
 import cassie2 from '../images/cassiecabininside1.jpg';
